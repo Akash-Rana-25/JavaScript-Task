@@ -5,9 +5,10 @@
 .table td button{
     border: none;
 } */
-/* .container{
+.container{
     border: solid black;
-} */
+    box-shadow: 1px 1px 5px #D1D3D5;
+}
 button{
     width: 100%;
     cursor: pointer;

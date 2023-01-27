@@ -12,28 +12,53 @@ function fe_btn(){
     result.value=Number(result.value).toExponential();
 
 }
-let on =false;
+let on=false;
+// if(on=false){
+//     document.getElementById("x_squre").style.display= "block";
+//     document.getElementById("sqrt").style.display= "block";
+//     document.getElementById("**").style.display= "block";
+//     document.getElementById("10squre").style.display= "block";
+//     document.getElementById("log").style.display= "block";
+//     document.getElementById("in").style.display= "block";
+
+// }
 function showrows(){
  on=true;
-console.log(on);
     if(on==true){
+
         document.getElementById("x_squre").style.display= "none";
-        // document.getElementById("sqrt").style.display= "none";
-        // document.getElementById("**").style.display= "none";
-        // document.getElementById("10squre").style.display= "none";
-        // document.getElementById("log").style.display= "none";
-        // document.getElementById("in").style.display= "none";
-        let test=document.getElementById("test").style.display= "";
-        console.log(test);
+        document.getElementById("sqrt").style.display= "none";
+        document.getElementById("**").style.display= "none";
+        document.getElementById("10squre").style.display= "none";
+        document.getElementById("log").style.display= "none";
+        document.getElementById("in").style.display= "none";
+
+       document.getElementById("x3").style.display= "block";
+       document.getElementById("3sqrt").style.display= "block";
+       document.getElementById("y_sqrt").style.display= "block";
+       document.getElementById("xcube").style.display= "block";
+       document.getElementById("log_y").style.display= "block";
+       document.getElementById("ecube").style.display= "block";
+
+
+
+       document.getElementById("sin").style.display= "none";
+       document.getElementById("cos").style.display= "none";
+       document.getElementById("tan").style.display= "none";
+       document.getElementById("sec").style.display= "none";
+       document.getElementById("csc").style.display= "none";
+       document.getElementById("cot").style.display= "none";
+
+       document.getElementById("sin1").style.display= "block";
+       document.getElementById("cos1").style.display= "block";
+       document.getElementById("tan1").style.display= "block";
+       document.getElementById("sec1").style.display= "block";
+       document.getElementById("csc1").style.display= "block";
+       document.getElementById("cot1").style.display= "block";
+
+
+
     }
-    // else{
-    //     document.getElementById("x_squre").style.display= "block";
-    //     document.getElementById("sqrt").style.display= "block";
-    //     document.getElementById("**").style.display= "block";
-    //     document.getElementById("10squre").style.display= "block";
-    //     document.getElementById("log").style.display= "block";
-    //     document.getElementById("in").style.display= "block";
-    // }
 
 
 
