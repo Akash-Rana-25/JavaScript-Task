@@ -5,3 +5,30 @@
 .table td button{
     border: none;
 } */
+.container{
+    border: solid black;
+}
+button{
+    width: 100%;
+    cursor: pointer;
+    
+}
+.ans{
+    border: none;
+    float: right;
+    text-align: right;
+    font-size: x-large;
+    font-weight: 600;
+}
+/* .dropdown1{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.dropdown1 button{
+
+  width: 100%;
+  padding: 1rem;
+} */
