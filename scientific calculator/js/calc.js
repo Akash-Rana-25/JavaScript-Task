@@ -80,7 +80,7 @@ function memoryFunction(opration) {
             ans1 = localStorage.getItem("memory");
             a1 = Number(ans1) - Number(num);
             localStorage.setItem("memory", a1);
-            console.log(a);
+            console.log(a1);
             console.log(memory);
             // }
             break;
