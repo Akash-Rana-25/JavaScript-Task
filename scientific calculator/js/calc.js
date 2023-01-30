@@ -8,18 +8,23 @@ if (memory.length == 0) {
 function display(val) {
     result.value += val;
 
-    // console.log(val);
-    //     if (val ==0 ) {
-    //         document.getElementById("c").style.display = "none";
-    //         document.getElementById("ce").style.display = "block";
-    //     } else {
-    //         document.getElementById("ce").style.display = "none";
-    //         document.getElementById("c").style.display = "block";
-    //     }
+
+    if (document.getElementById('result').value != '') {
+        document.getElementById("c").style.display = "none";
+        document.getElementById("ce").style.display = "block";
+    } else {
+        document.getElementById("ce").style.display = "none";
+        document.getElementById("c").style.display = "block";
+    }
+
+    console.log(val);
     return val
 
-
 }
+
+
+
+
 
 function fe_btn() {
     result.value = Number(result.value).toExponential();
@@ -37,6 +42,8 @@ function memoryFunction(opration) {
         case 'ms':
             memory.push(num);
             console.log(memory);
+            localStorage.setItem("memory", num);
+
             break;
         case 'mc':
             memory = [];
@@ -44,34 +51,38 @@ function memoryFunction(opration) {
             break;
 
         case 'mr':
-            ans1 = memory.pop();
+            ans1 = localStorage.getItem("memory");
             console.log(memory);
+
             break;
 
         case 'm_plus':
-            if (memory.length == 0) {
-                memory.push(num);
-                clearScreen();
-                // console.log(memory);
-            } else {
-                let a;
-                a = Number(num) + Number(memory[memory.length - 1]);
-                console.log(a);
-                console.log(memory);
-            }
+            // if (memory.length == 0) {
+            memory.push(num);
+            clearScreen();
+            // console.log(memory);
+            // } else {
+            let a;
+            ans1 = localStorage.getItem("memory");
+            a = Number(ans1) + Number(num);
+            localStorage.setItem("memory", a);
+            console.log(a);
+            console.log(memory);
+            // }
 
             break;
         case 'm_minus':
-            if (memory.length == 0) {
-                memory.push(num);
-                clearScreen();
-                // console.log(memory);
-            } else {
-                let a;
-                a = Number(num) - Number(memory[memory.length - 1]);
-                console.log(a);
-                console.log(memory);
-            }
+
+            memory.push(num);
+            clearScreen();
+
+            let a1;
+            ans1 = localStorage.getItem("memory");
+            a1 = Number(ans1) - Number(num);
+            localStorage.setItem("memory", a1);
+            console.log(a);
+            console.log(memory);
+            // }
             break;
 
         default:
@@ -90,14 +101,14 @@ function showrows() {
     if (on % 2 == 0) {
         document.getElementById("x_squre").style.display = "none";
         document.getElementById("sqrt").style.display = "none";
-        document.getElementById("**").style.display = "none";
+        // document.getElementById("**").style.display = "none";
         document.getElementById("10squre").style.display = "none";
         // document.getElementById("log").style.display = "none";
         document.getElementById("in").style.display = "none";
 
         document.getElementById("x3").style.display = "block";
         document.getElementById("3sqrt").style.display = "block";
-        document.getElementById("y_sqrt").style.display = "block";
+        // document.getElementById("y_sqrt").style.display = "block";
         document.getElementById("xcube").style.display = "block";
         // document.getElementById("log_y").style.display = "block";
         document.getElementById("ecube").style.display = "block";
@@ -127,7 +138,7 @@ function showrows() {
 
         document.getElementById("x3").style.display = "none";
         document.getElementById("3sqrt").style.display = "none";
-        document.getElementById("y_sqrt").style.display = "none";
+        // document.getElementById("y_sqrt").style.display = "none";
         document.getElementById("xcube").style.display = "none";
         // document.getElementById("log_y").style.display = "none";
         document.getElementById("ecube").style.display = "none";
@@ -153,6 +164,14 @@ function showrows() {
 function clearScreen() {
 
     document.getElementById('result').value = ''
+
+    if (document.getElementById('result').value != '') {
+        document.getElementById("c").style.display = "none";
+        document.getElementById("ce").style.display = "block";
+    } else {
+        document.getElementById("ce").style.display = "none";
+        document.getElementById("c").style.display = "block";
+    }
 
 }
 function solve() {
@@ -195,6 +214,11 @@ function mathfun(math_obj) {
         case 'sqrt':
             ans = Math.sqrt(z);
             break;
+
+        case '3sqrt':
+            ans = Math.cbrt(z);
+            break;
+
         case 'x_squre':
             ans = Math.pow(z, 2);
             break;
