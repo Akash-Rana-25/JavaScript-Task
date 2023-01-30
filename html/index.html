@@ -31,20 +31,25 @@
                                         </tr>
 
                                         <tr>
-                                                <td><button type="button" id="dfg"
+                                                <!-- <td><button type="button" id="dfg"
                                                                 class="btn btn-light"><b>DFG</b></button>
-                                                </td>
+                                                </td> -->
                                                 <td><button type="button" id="feButton" onclick="fe_btn()"
                                                                 class="btn btn-light"><b>F-E</b></button></td>
                                         </tr>
                                         <tr>
-                                                <td><button type="button" id="mc" class="btn btn-light">MC</button></td>
-                                                <td><button type="button" id="mr" class="btn btn-light">MR</button></td>
-                                                <td><button type="button" id="m_plus" class="btn btn-light">M+</button>
+                                                <td><button type="button" id="mc" class="btn btn-light"
+                                                                onclick="memoryFunction(this.id)">MC</button></td>
+                                                <td><button type="button" id="mr" class="btn btn-light"
+                                                                onclick="memoryFunction(this.id)">MR</button></td>
+                                                <td><button type="button" id="m_plus" class="btn btn-light"
+                                                                onclick="memoryFunction(this.id)">M+</button>
                                                 </td>
-                                                <td><button type="button" id="m_minus" class="btn btn-light">M-</button>
+                                                <td><button type="button" id="m_minus" class="btn btn-light"
+                                                                onclick="memoryFunction(this.id)">M-</button>
                                                 </td>
-                                                <td><button type="button" id="ms" class="btn btn-light">MS</button></td>
+                                                <td><button type="button" id="ms" class="btn btn-light"
+                                                                onclick="memoryFunction(this.id)">MS</button></td>
                                         </tr>
                                 </tbody>
                         </table>
@@ -53,104 +58,90 @@
                                 <tbody>
                                         <tr>
                                                 <td>
-                                                        <div class="dropdown">
-                                                                <button class="btn btn-light dropdown-toggle"
-                                                                        type="button" id="dropdownMenuButton1"
-                                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                                        &#9727;Trigonometry
-                                                                </button>
-                                                                <ul class="dropdown-menu "
-                                                                        aria-labelledby="dropdownMenuButton1">
-                                                                        <div class="dropdown1">
-                                                                                <li><button onclick="showrows()"
-                                                                                                class=" btn btn-dark  dropdown-item">2<sup>nd</sup></button>
-                                                                                </li>
-                                                                                <li><button class="dropdown-item"
-                                                                                                id="sin"
-                                                                                                onclick="mathfun(this.id)">sin</button>
 
-                                                                                        <button class="dropdown-item"
-                                                                                                id="sin1"
-                                                                                                style="display: none;"
-                                                                                                onclick="mathfun(this.id)">sin<sup>-1</sup></button>
-                                                                                </li>
-                                                                                <li><button class="dropdown-item"
-                                                                                                id="cos"
-                                                                                                onclick="mathfun(this.id)">cos</button>
-                                                                                        <button class="dropdown-item"
-                                                                                                id="cos1"
-                                                                                                style="display: none;"
-                                                                                                onclick="mathfun(this.id)">cos<sup>-1</sup></button>
-                                                                                </li>
-                                                                                <li><button class="dropdown-item"
-                                                                                                id="tan"
-                                                                                                onclick="mathfun(this.id)">tan</button>
-                                                                                        <button class="dropdown-item"
-                                                                                                id="tan1"
-                                                                                                style="display: none;"
-                                                                                                onclick="mathfun(this.id)">tan<sup>-1</sup></button>
-                                                                                </li>
-                                                                                <li><button class="dropdown-item"
-                                                                                                id="hyp"
-                                                                                                onclick="mathfun(this.id)">hyp</button>
-                                                                                </li>
-                                                                                <li><button class="dropdown-item"
-                                                                                                id="sec"
-                                                                                                onclick="mathfun(this.id)">sec</button>
-                                                                                        <button class="dropdown-item"
-                                                                                                id="sec1"
-                                                                                                style="display: none;"
-                                                                                                onclick="mathfun(this.id)">sec<sup>-1</sup></button>
-                                                                                </li>
-                                                                                <li><button class="dropdown-item"
-                                                                                                id="csc"
-                                                                                                onclick="mathfun(this.id)">csc</button>
-                                                                                        <button class="dropdown-item"
-                                                                                                id="csc1"
-                                                                                                style="display: none;"
-                                                                                                onclick="mathfun(this.id)">csc<sup>-1</sup></button>
-                                                                                </li>
-                                                                                <li><button class="dropdown-item"
-                                                                                                id="cot"
-                                                                                                onclick="mathfun(this.id)">cot</button>
-                                                                                        <button class="dropdown-item"
-                                                                                                id="cot1"
-                                                                                                style="display: none;"
-                                                                                                onclick="mathfun(this.id)">cot<sup>-1</sup></button>
-                                                                                </li>
-                                                                        </div>
-                                                                </ul>
-                                                        </div>
+                                                        <button class="btn btn-light dropdown-toggle" type="button"
+                                                                id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                &#9727;Trigonometry
+                                                        </button>
+                                                        <ul class="dropdown-menu horizontal"
+                                                                aria-labelledby="dropdownMenuButton1">
+
+                                                                <li><button onclick="showrows()"
+                                                                                class=" btn btn-dark  dropdown-item">2<sup>nd</sup></button>
+                                                                </li>
+                                                                <li><button class="dropdown-item" id="sin"
+                                                                                onclick="mathfun(this.id)">sin</button>
+
+                                                                        <button class="dropdown-item" id="sin1"
+                                                                                style="display: none;"
+                                                                                onclick="mathfun(this.id)">sin<sup>-1</sup></button>
+                                                                </li>
+                                                                <li><button class="dropdown-item" id="cos"
+                                                                                onclick="mathfun(this.id)">cos</button>
+                                                                        <button class="dropdown-item" id="cos1"
+                                                                                style="display: none;"
+                                                                                onclick="mathfun(this.id)">cos<sup>-1</sup></button>
+                                                                </li>
+                                                                <li><button class="dropdown-item" id="tan"
+                                                                                onclick="mathfun(this.id)">tan</button>
+                                                                        <button class="dropdown-item" id="tan1"
+                                                                                style="display: none;"
+                                                                                onclick="mathfun(this.id)">tan<sup>-1</sup></button>
+                                                                </li>
+                                                                <li><button class="dropdown-item" id="hyp"
+                                                                                onclick="mathfun(this.id)">hyp</button>
+                                                                </li>
+                                                                <li><button class="dropdown-item" id="sec"
+                                                                                onclick="mathfun(this.id)">sec</button>
+                                                                        <button class="dropdown-item" id="sec1"
+                                                                                style="display: none;"
+                                                                                onclick="mathfun(this.id)">sec<sup>-1</sup></button>
+                                                                </li>
+                                                                <li><button class="dropdown-item" id="csc"
+                                                                                onclick="mathfun(this.id)">csc</button>
+                                                                        <button class="dropdown-item" id="csc1"
+                                                                                style="display: none;"
+                                                                                onclick="mathfun(this.id)">csc<sup>-1</sup></button>
+                                                                </li>
+                                                                <li><button class="dropdown-item" id="cot"
+                                                                                onclick="mathfun(this.id)">cot</button>
+                                                                        <button class="dropdown-item" id="cot1"
+                                                                                style="display: none;"
+                                                                                onclick="mathfun(this.id)">cot<sup>-1</sup></button>
+                                                                </li>
+                                                        </ul>
+
 
                                                 </td>
                                                 <td>
-                                                        <div class="dropdown">
-                                                                <button class="btn btn-light dropdown-toggle"
-                                                                        type="button" id="dropdownMenuButton1"
-                                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                                        &#402;Function
-                                                                </button>
-                                                                <ul class="dropdown-menu"
-                                                                        aria-labelledby="dropdownMenuButton1">
-                                                                        <li><button class="dropdown-item"
-                                                                                        onclick="mathfun(this.id)">|x|</button>
-                                                                        </li>
-                                                                        <li><button class="dropdown-item"
-                                                                                        onclick="mathfun(this.id)"
-                                                                                        id="floor">⌊x⌋</button></li>
-                                                                        <li><button class="dropdown-item"
-                                                                                        onclick="mathfun(this.id)"
-                                                                                        id="ceil">⌈x⌉</button></li>
-                                                                        <li><button class="dropdown-item"
-                                                                                        onclick="mathfun(this.id)"
-                                                                                        id="rand">rand</button>
-                                                                        </li>
-                                                                        <li><button class="dropdown-item">->dms</button>
+
+                                                        <button class="btn btn-light dropdown-toggle" type="button"
+                                                                id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                &#402;Function
+                                                        </button>
+                                                        <ul class="dropdown-menu horizontal"
+                                                                aria-labelledby="dropdownMenuButton1">
+                                                                <li><button class="dropdown-item"
+                                                                                onclick="mathfun(this.id)">|x|</button>
+                                                                </li>
+                                                                <li><button class="dropdown-item"
+                                                                                onclick="mathfun(this.id)"
+                                                                                id="floor">⌊x⌋</button></li>
+                                                                <li><button class="dropdown-item"
+                                                                                onclick="mathfun(this.id)"
+                                                                                id="ceil">⌈x⌉</button></li>
+                                                                <li><button class="dropdown-item"
+                                                                                onclick="mathfun(this.id)"
+                                                                                id="rand">rand</button>
+                                                                </li>
+                                                                <!-- <li><button class="dropdown-item">->dms</button>
                                                                         </li>
                                                                         <li><button class="dropdown-item">->deg</button>
-                                                                        </li>
-                                                                </ul>
-                                                        </div>
+                                                                        </li> -->
+                                                        </ul>
+
                                                 </td>
 
                                         </tr>
@@ -161,19 +152,23 @@
                                 <tbody>
                                         <tr>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="2nd"
+                                                                class="btn btn-outline-dark border-1" id="2nd"
                                                                 onclick="showrows()">2<sup>nd</sup></button></td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="pi"
+                                                                class="btn btn-outline-dark border-1" id="pi"
                                                                 onclick="mathfun(this.id)">&prod;</button></td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="e"
+                                                                class="btn btn-outline-dark border-1" id="e"
                                                                 onclick="mathfun(this.id)">e</button></td>
+                                                <td class="text-center bg-light"><button type="button"style="display: block;"
+                                                                class="btn btn-outline-dark border-1" id="c"
+                                                                onclick="clearScreen()">C</button>
+
+                                                        <button type="button"style="display: none;" class="btn btn-outline-dark border-1"
+                                                                id="ce" onclick="clearScreen()">CE</button>
+                                                </td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="c"
-                                                                onclick="clearScreen()">C</button></td>
-                                                <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="back"
+                                                                class="btn btn-outline-dark border-1" id="back"
                                                                 onclick="backspace()"><span
                                                                         class="material-symbols-outlined">backspace</span></button>
                                                 </td>
@@ -181,141 +176,141 @@
                                         </tr>
                                         <tr>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="x_squre"
+                                                                class="btn btn-outline-dark border-1" id="x_squre"
                                                                 onclick="mathfun(this.id)">x<sup>2</sup></button>
 
                                                         <button type="button" style="display: none"
-                                                                class="btn btn-outline-dark border-0" id="x3"
+                                                                class="btn btn-outline-dark border-1" id="x3"
                                                                 onclick="mathfun(this.id)">x<sup>3</sup></button>
                                                 </td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="one&half"
+                                                                class="btn btn-outline-dark border-1" id="one&half"
                                                                 onclick="mathfun(this.id)">1/x</button></td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="|x|"
+                                                                class="btn btn-outline-dark border-1" id="|x|"
                                                                 onclick="mathfun(this.id)">|x|</button></td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="exp"
+                                                                class="btn btn-outline-dark border-1" id="exp"
                                                                 onclick="mathfun(this.id)">exp</button></td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="%"
+                                                                class="btn btn-outline-dark border-1" id="%"
                                                                 onclick="display(this.id)">mod</button></td>
 
                                         </tr>
                                         <tr>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="sqrt"
+                                                                class="btn btn-outline-dark border-1" id="sqrt"
                                                                 onclick="mathfun(this.id)">2&radic;x</button>
 
                                                         <button type="button" style="display: none"
-                                                                class="btn btn-outline-dark border-0" id="3sqrt"
+                                                                class="btn btn-outline-dark border-1" id="3sqrt"
                                                                 onclick="mathfun(this.id)">3&radic;x</button>
 
                                                 </td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="("
-                                                                onclick="mathfun(this.id)">(</button></td>
+                                                                class="btn btn-outline-dark border-1" id="("
+                                                                onclick="display(this.id)">(</button></td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id=")"
-                                                                onclick="mathfun(this.id)">)</button></td>
+                                                                class="btn btn-outline-dark border-1" id=")"
+                                                                onclick="display(this.id)">)</button></td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="fact"
+                                                                class="btn btn-outline-dark border-1" id="fact"
                                                                 onclick="mathfun(this.id)">n!</button></td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="/"
+                                                                class="btn btn-outline-dark border-1" id="/"
                                                                 onClick="display('/')">&#247;</button></td>
 
                                         </tr>
                                         <tr>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="**"
+                                                                class="btn btn-outline-dark border-1" id="**"
                                                                 onclick="display(this.id)">x<sup>y</button>
 
                                                         <button type="button" style="display: none"
-                                                                class="btn btn-outline-dark border-0" id="y_sqrt"
+                                                                class="btn btn-outline-dark border-1" id="y_sqrt"
                                                                 onclick="mathfun(this.id)">y&radic;x</button>
 
                                                 </td>
                                                 <td class="text-center"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="7"
+                                                                class="btn btn-outline-dark border-1" id="7"
                                                                 onClick="display(this.id)"><b>7</b></button></td>
                                                 <td class="text-center"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="8"
+                                                                class="btn btn-outline-dark border-1" id="8"
                                                                 onClick="display(this.id)"><b>8</b></button></td>
                                                 <td class="text-center"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="9"
+                                                                class="btn btn-outline-dark border-1" id="9"
                                                                 onClick="display(this.id)"><b>9</b></button></td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="*"
+                                                                class="btn btn-outline-dark border-1" id="*"
                                                                 onClick="display(this.id)">X</button></td>
 
                                         </tr>
                                         <tr>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="10squre"
+                                                                class="btn btn-outline-dark border-1" id="10squre"
                                                                 onclick="mathfun(this.id)">10<sup>x</button>
 
                                                         <button type="button" style="display: none"
-                                                                class="btn btn-outline-dark border-0" id="xcube"
+                                                                class="btn btn-outline-dark border-1" id="xcube"
                                                                 onclick="mathfun(this.id)">2<sup>x</sup></button>
                                                 </td>
                                                 <td class="text-center"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="4"
+                                                                class="btn btn-outline-dark border-1" id="4"
                                                                 onClick="display(this.id)"><b>4</b></button></td>
                                                 <td class="text-center"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="5"
+                                                                class="btn btn-outline-dark border-1" id="5"
                                                                 onClick="display(this.id)"><b>5</b></button></td>
                                                 <td class="text-center"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="6"
+                                                                class="btn btn-outline-dark border-1" id="6"
                                                                 onClick="display(this.id)"><b>6</b></button></td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="-"
+                                                                class="btn btn-outline-dark border-1" id="-"
                                                                 onClick="display('-')">-</button></td>
 
                                         </tr>
                                         <tr>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="log"
+                                                                class="btn btn-outline-dark border-1" id="log"
                                                                 onclick="mathfun(this.id)">log</button>
 
                                                         <button type="button" style="display: none"
-                                                                class="btn btn-outline-dark border-0" id="log_y"
+                                                                class="btn btn-outline-dark border-1" id="log_y"
                                                                 onclick="mathfun(this.id)">logx</button>
                                                 </td>
                                                 <td class="text-center"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="1"
+                                                                class="btn btn-outline-dark border-1" id="1"
                                                                 onClick="display(this.id)"><b>1</b></button></td>
                                                 <td class="text-center"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="2"
+                                                                class="btn btn-outline-dark border-1" id="2"
                                                                 onClick="display(this.id)"><b>2</b></button></td>
                                                 <td class="text-center"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="3"
+                                                                class="btn btn-outline-dark border-1" id="3"
                                                                 onClick="display(this.id)"><b>3</b></button></td>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="+"
+                                                                class="btn btn-outline-dark border-1" id="+"
                                                                 onClick="display('+')">+</button></td>
 
                                         </tr>
                                         <tr>
                                                 <td class="text-center bg-light"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="in"
+                                                                class="btn btn-outline-dark border-1" id="in"
                                                                 onclick="mathfun(this.id)">In</button>
 
                                                         <button type="button" style="display: none"
-                                                                class="btn btn-outline-dark border-0" id="ecube"
+                                                                class="btn btn-outline-dark border-1" id="ecube"
                                                                 onclick="mathfun(this.id)">e<sup>x</sup></button>
                                                 </td>
                                                 <td class="text-center bg-light" style="display: none;"><button
-                                                                type="button" class="btn btn-outline-dark border-0"
+                                                                type="button" class="btn btn-outline-dark border-1"
                                                                 id="test" onclick="mathfun(this.id)">In</button></td>
                                                 <td class="text-center "><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="plus_or_minus"
+                                                                class="btn btn-outline-dark border-1" id="plus_or_minus"
                                                                 onclick="mathfun(this.id)">+/-</button></td>
                                                 <td class="text-center"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="0"
+                                                                class="btn btn-outline-dark border-1" id="0"
                                                                 onClick="display(this.id)"><b>0</b></button></td>
                                                 <td class="text-center"><button type="button"
-                                                                class="btn btn-outline-dark border-0" id="."
+                                                                class="btn btn-outline-dark border-1" id="."
                                                                 onClick="display(this.id)">.</button></td>
                                                 <td class="text-center bg-light"><button type="button"
                                                                 class="btn btn-primary btn-lg" id="equal"
