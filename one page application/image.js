@@ -21,5 +21,9 @@ function showSlides(n) {
   }
  
   slides[slide-1].style.display = "block";
-  dots[slide-1].className += " active";
+  // dots[slide-1].className += " active";
+}
+
+function myFunction(content) {
+ document.getElementById(content).scrollIntoView(); 
 }
